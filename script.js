@@ -106,7 +106,9 @@ function featureExtractorLoaded() {
 
 
 function gotResults(error, results) {
-  if(error) {
-    console
+ if(error) {
+    console.error(error);
+  } else {
+    textP.html("Label: " + results.label);
   }
 }
