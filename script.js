@@ -4,7 +4,13 @@
 let canvasDiv;
 let canvas;
 let textDiv;
-
+let textP;
+let textP2;
+let buttonDiv;
+let upButton;
+let downButton;
+let leftButton;
+let rightButton;
 // Global ML variables
 let featureExtractor;
 let imgFeatures;
@@ -55,7 +61,7 @@ function buildButtons() {
   upButton.parent(buttonDiv);
   upButton.mousePressed(function() {
     ups++;
-    textP.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
+    textP2.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
     knnClassifier.addExample(imgFeatures, "Down");
   })
 
@@ -63,7 +69,7 @@ function buildButtons() {
   downButton.parent(buttonDiv);
   downButton.mousePressed(function() {
     downs++;
-    textP.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
+    textP2.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
     knnClassifier.addExample(imgFeatures, "Down");
   })
 
@@ -71,7 +77,7 @@ function buildButtons() {
   leftButton.parent(buttonDiv);
   leftButton.mousePressed(function() {
     lefts++;
-    textP.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
+    textP2.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
     knnClassifier.addExample(imgFeatures, "Left");
   })
 
@@ -79,7 +85,7 @@ function buildButtons() {
   rightButton.parent(buttonDiv);
   rightButton.mousePressed(function() {
     rights++;
-    textP.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
+    text2P.html("Ups: " + ups + " - Downs:" + downs + " - Lefts: " + lefts + " - Rights:" + rights);
     knnClassifier.addExample(imgFeatures, "Right");
 
   buttonDiv.style("display", mome)
